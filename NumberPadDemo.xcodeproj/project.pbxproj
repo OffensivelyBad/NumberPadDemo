@@ -10,7 +10,6 @@
 		294567C6205B0C2B00D6CAFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294567C5205B0C2B00D6CAFE /* AppDelegate.swift */; };
 		294567C8205B0C2B00D6CAFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294567C7205B0C2B00D6CAFE /* ViewController.swift */; };
 		294567CB205B0C2B00D6CAFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294567C9205B0C2B00D6CAFE /* Main.storyboard */; };
-		294567CE205B0C2B00D6CAFE /* NumberPadDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 294567CC205B0C2B00D6CAFE /* NumberPadDemo.xcdatamodeld */; };
 		294567D0205B0C2B00D6CAFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 294567CF205B0C2B00D6CAFE /* Assets.xcassets */; };
 		294567D3205B0C2B00D6CAFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294567D1205B0C2B00D6CAFE /* LaunchScreen.storyboard */; };
 		294567DD205B0C9900D6CAFE /* NumberPadInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294567DB205B0C9900D6CAFE /* NumberPadInputViewController.swift */; };
@@ -22,7 +21,6 @@
 		294567C5205B0C2B00D6CAFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		294567C7205B0C2B00D6CAFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		294567CA205B0C2B00D6CAFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		294567CD205B0C2B00D6CAFE /* NumberPadDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NumberPadDemo.xcdatamodel; sourceTree = "<group>"; };
 		294567CF205B0C2B00D6CAFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		294567D2205B0C2B00D6CAFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		294567D4205B0C2B00D6CAFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,25 +58,24 @@
 		294567C4205B0C2B00D6CAFE /* NumberPadDemo */ = {
 			isa = PBXGroup;
 			children = (
-				294567DA205B0C5B00D6CAFE /* NumberPadInput */,
+				294567DA205B0C5B00D6CAFE /* Source */,
 				294567C5205B0C2B00D6CAFE /* AppDelegate.swift */,
 				294567C7205B0C2B00D6CAFE /* ViewController.swift */,
 				294567C9205B0C2B00D6CAFE /* Main.storyboard */,
 				294567CF205B0C2B00D6CAFE /* Assets.xcassets */,
 				294567D1205B0C2B00D6CAFE /* LaunchScreen.storyboard */,
 				294567D4205B0C2B00D6CAFE /* Info.plist */,
-				294567CC205B0C2B00D6CAFE /* NumberPadDemo.xcdatamodeld */,
 			);
 			path = NumberPadDemo;
 			sourceTree = "<group>";
 		};
-		294567DA205B0C5B00D6CAFE /* NumberPadInput */ = {
+		294567DA205B0C5B00D6CAFE /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				294567DB205B0C9900D6CAFE /* NumberPadInputViewController.swift */,
 				294567DC205B0C9900D6CAFE /* NumberPadInputViewController.xib */,
 			);
-			path = NumberPadInput;
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +152,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				294567C8205B0C2B00D6CAFE /* ViewController.swift in Sources */,
-				294567CE205B0C2B00D6CAFE /* NumberPadDemo.xcdatamodeld in Sources */,
 				294567DD205B0C9900D6CAFE /* NumberPadInputViewController.swift in Sources */,
 				294567C6205B0C2B00D6CAFE /* AppDelegate.swift in Sources */,
 			);
@@ -342,19 +338,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		294567CC205B0C2B00D6CAFE /* NumberPadDemo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				294567CD205B0C2B00D6CAFE /* NumberPadDemo.xcdatamodel */,
-			);
-			currentVersion = 294567CD205B0C2B00D6CAFE /* NumberPadDemo.xcdatamodel */;
-			path = NumberPadDemo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 294567BA205B0C2B00D6CAFE /* Project object */;
 }

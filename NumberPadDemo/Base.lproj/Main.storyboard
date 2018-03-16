@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,24 +23,24 @@
                                 <rect key="frame" x="306" y="457" width="412" height="291"/>
                                 <color key="backgroundColor" red="0.91087745460000002" green="1" blue="0.45021996489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="291" id="Rd3-Af-71Q"/>
-                                    <constraint firstAttribute="width" constant="412" id="c6w-fY-eRB"/>
+                                    <constraint firstAttribute="width" priority="999" constant="412" id="USh-On-Awx"/>
+                                    <constraint firstAttribute="width" secondItem="gfr-Ry-Uri" secondAttribute="height" multiplier="412:291" id="xRS-Fm-Ayx"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7GO-cp-xHq">
-                                <rect key="frame" x="477.5" y="40" width="70" height="30"/>
+                                <rect key="frame" x="442" y="297" width="140" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="04p-NC-T82"/>
-                                    <constraint firstAttribute="width" constant="70" id="cCi-KZ-Lae"/>
+                                    <constraint firstAttribute="width" constant="140" id="cCi-KZ-Lae"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="63l-oK-jQr">
-                                <rect key="frame" x="477.5" y="90" width="70" height="30"/>
+                                <rect key="frame" x="442" y="347" width="140" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="Cqo-FR-CJQ"/>
+                                    <constraint firstAttribute="width" constant="140" id="Cqo-FR-CJQ"/>
                                     <constraint firstAttribute="height" constant="30" id="SJ7-9u-o3f"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -47,10 +48,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3v-63-Swa">
-                                <rect key="frame" x="477.5" y="140" width="70" height="30"/>
+                                <rect key="frame" x="442" y="397" width="140" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Xy2-cp-JIe"/>
-                                    <constraint firstAttribute="width" constant="70" id="pR4-dJ-086"/>
+                                    <constraint firstAttribute="width" constant="140" id="pR4-dJ-086"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -59,13 +60,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="gfr-Ry-Uri" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="08o-Ad-SkO"/>
+                            <constraint firstItem="gfr-Ry-Uri" firstAttribute="top" secondItem="c3v-63-Swa" secondAttribute="bottom" constant="30" id="AnV-AR-gCt"/>
                             <constraint firstItem="c3v-63-Swa" firstAttribute="top" secondItem="63l-oK-jQr" secondAttribute="bottom" constant="20" id="L6I-nd-vga"/>
-                            <constraint firstItem="7GO-cp-xHq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Nf6-Jj-yb8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gfr-Ry-Uri" secondAttribute="trailing" constant="8" id="cLb-b8-gqZ"/>
                             <constraint firstItem="63l-oK-jQr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fAO-ty-7fj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gfr-Ry-Uri" secondAttribute="bottom" constant="20" id="fhF-4y-c7x"/>
                             <constraint firstItem="c3v-63-Swa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kqp-Iy-MGw"/>
                             <constraint firstItem="63l-oK-jQr" firstAttribute="top" secondItem="7GO-cp-xHq" secondAttribute="bottom" constant="20" id="qiq-mB-Lih"/>
-                            <constraint firstItem="gfr-Ry-Uri" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w4N-ji-FWy"/>
+                            <constraint firstItem="gfr-Ry-Uri" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u2W-Cs-5Qk"/>
                             <constraint firstItem="7GO-cp-xHq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yfy-yu-hCr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -75,6 +78,9 @@
                         <outlet property="textFieldOne" destination="7GO-cp-xHq" id="0pe-pH-rRq"/>
                         <outlet property="textFieldThree" destination="c3v-63-Swa" id="LOa-FV-HgM"/>
                         <outlet property="textFieldTwo" destination="63l-oK-jQr" id="be0-cl-9dh"/>
+                        <outletCollection property="textFields" destination="7GO-cp-xHq" collectionClass="NSMutableArray" id="nFG-7f-MAu"/>
+                        <outletCollection property="textFields" destination="63l-oK-jQr" collectionClass="NSMutableArray" id="3lr-x3-kFu"/>
+                        <outletCollection property="textFields" destination="c3v-63-Swa" collectionClass="NSMutableArray" id="vM0-C9-Fyp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

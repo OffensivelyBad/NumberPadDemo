@@ -17,8 +17,9 @@ class NumberPadInputViewController: UIViewController {
 
     // MARK: Public properties
     public weak var delegate: NumberPadDelegate?
+    public var cornerRadius: CGFloat = 0
     public var customButtonTitles = [String]()
-    public var buttonBackgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    public var buttonBackgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     public var buttonTitleColor = #colorLiteral(red: 0.2744824886, green: 0.2745272219, blue: 0.2744727433, alpha: 1)
     public var buttonFont = UIFont(name: "Gotham-Medium", size: 26) ?? UIFont.systemFont(ofSize: 26)
     public var variableButtonFont = UIFont(name: "Gotham-Medium", size: 14) ?? UIFont.systemFont(ofSize: 14)
@@ -87,6 +88,11 @@ extension NumberPadInputViewController {
 extension NumberPadInputViewController {
     
     fileprivate func layoutView() {
+        if self.cornerRadius > 0 {
+            self.view.layer.masksToBounds = true
+            self.view.layer.cornerRadius = self.cornerRadius
+        }
+        
         for (index, button) in buttonCollection.enumerated() {
             guard self.buttonTitles.count > index else { continue }
             button.setTitle(self.buttonTitles[index], for: .normal)
@@ -105,8 +111,8 @@ extension NumberPadInputViewController {
             view.layer.borderColor = self.buttonBorderColor.cgColor
             view.layer.borderWidth = 0.5
         }
-        view.layer.borderColor = self.outsideBorderColor.cgColor
-        view.layer.borderWidth = 1
+        self.view.layer.borderColor = self.outsideBorderColor.cgColor
+        self.view.layer.borderWidth = 1
     }
     
 }
