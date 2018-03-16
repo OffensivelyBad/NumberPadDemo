@@ -25,6 +25,7 @@ class NumberPadInputViewController: UIViewController {
     public var variableFontSizePositions = [9, 11]
     public var buttonBorderColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
     public var outsideBorderColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+    public var currentNumber = ""
     
     // MARK: Private properties
     fileprivate var buttonTitles: [String] {
@@ -35,7 +36,6 @@ class NumberPadInputViewController: UIViewController {
             return ["1", "2", "3", "4", "5", "6", "7", "8", "9", "NEXT", "0", "DEL"]
         }
     }
-    fileprivate var currentNumber = ""
     
     // MARK: Outlets
     @IBOutlet var buttonViewCollection: [UIView]!
@@ -67,18 +67,18 @@ extension NumberPadInputViewController {
     }
     
     @IBAction fileprivate func tappedNext( _sender: UIButton) {
+        self.currentNumber = ""
         self.delegate?.tappedNext(numberPad: self)
     }
     
     @IBAction fileprivate func tappedDelete(_ sender: UIButton) {
-        print(self.currentNumber)
         guard self.currentNumber.count > 0 else { return }
         var newNumber = ""
         if self.currentNumber.count > 1 {
             newNumber = String(self.currentNumber.prefix(self.currentNumber.count - 1))
         }
         self.currentNumber = newNumber
-        print(self.currentNumber)
+        self.delegate?.numberPad(self, typed: self.currentNumber)
     }
     
 }
