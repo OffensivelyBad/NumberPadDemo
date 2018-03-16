@@ -10,16 +10,40 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textFieldOne: UITextField!
+    @IBOutlet weak var textFieldTwo: UITextField!
+    @IBOutlet weak var textFieldThree: UITextField!
+    @IBOutlet weak var numPadContainerView: UIView!
+    
+    fileprivate var numPad = NumberPadInputViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Add the numberpad
+        setupNumberPad()
+    }
+    
+    fileprivate func setupNumberPad() {
+        self.numPad = NumberPadInputViewController(nibName: "NumberPadInputViewController", bundle: nil)
+        self.numPad.delegate = self
+        self.numPad.view.frame = self.numPadContainerView.frame
+        self.view.addSubview(self.numPad.view)
+        self.numPad.didMove(toParentViewController: self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+// MARK: - NumberPadDelegate
+extension ViewController: NumberPadDelegate {
+    
+    func numberPad(_ numberPad: NumberPadInputViewController, typed number: String) {
+        
     }
-
-
+    
+    func tappedNext(numberPad: NumberPadInputViewController) {
+        
+    }
+    
 }
 

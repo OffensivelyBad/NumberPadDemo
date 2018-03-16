@@ -13,6 +13,8 @@
 		294567CE205B0C2B00D6CAFE /* NumberPadDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 294567CC205B0C2B00D6CAFE /* NumberPadDemo.xcdatamodeld */; };
 		294567D0205B0C2B00D6CAFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 294567CF205B0C2B00D6CAFE /* Assets.xcassets */; };
 		294567D3205B0C2B00D6CAFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294567D1205B0C2B00D6CAFE /* LaunchScreen.storyboard */; };
+		294567DD205B0C9900D6CAFE /* NumberPadInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294567DB205B0C9900D6CAFE /* NumberPadInputViewController.swift */; };
+		294567DE205B0C9900D6CAFE /* NumberPadInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294567DC205B0C9900D6CAFE /* NumberPadInputViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		294567CF205B0C2B00D6CAFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		294567D2205B0C2B00D6CAFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		294567D4205B0C2B00D6CAFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		294567DB205B0C9900D6CAFE /* NumberPadInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadInputViewController.swift; sourceTree = "<group>"; };
+		294567DC205B0C9900D6CAFE /* NumberPadInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberPadInputViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		294567C4205B0C2B00D6CAFE /* NumberPadDemo */ = {
 			isa = PBXGroup;
 			children = (
+				294567DA205B0C5B00D6CAFE /* NumberPadInput */,
 				294567C5205B0C2B00D6CAFE /* AppDelegate.swift */,
 				294567C7205B0C2B00D6CAFE /* ViewController.swift */,
 				294567C9205B0C2B00D6CAFE /* Main.storyboard */,
@@ -65,6 +70,15 @@
 				294567CC205B0C2B00D6CAFE /* NumberPadDemo.xcdatamodeld */,
 			);
 			path = NumberPadDemo;
+			sourceTree = "<group>";
+		};
+		294567DA205B0C5B00D6CAFE /* NumberPadInput */ = {
+			isa = PBXGroup;
+			children = (
+				294567DB205B0C9900D6CAFE /* NumberPadInputViewController.swift */,
+				294567DC205B0C9900D6CAFE /* NumberPadInputViewController.xib */,
+			);
+			path = NumberPadInput;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				294567DE205B0C9900D6CAFE /* NumberPadInputViewController.xib in Resources */,
 				294567D3205B0C2B00D6CAFE /* LaunchScreen.storyboard in Resources */,
 				294567D0205B0C2B00D6CAFE /* Assets.xcassets in Resources */,
 				294567CB205B0C2B00D6CAFE /* Main.storyboard in Resources */,
@@ -141,6 +156,7 @@
 			files = (
 				294567C8205B0C2B00D6CAFE /* ViewController.swift in Sources */,
 				294567CE205B0C2B00D6CAFE /* NumberPadDemo.xcdatamodeld in Sources */,
+				294567DD205B0C9900D6CAFE /* NumberPadInputViewController.swift in Sources */,
 				294567C6205B0C2B00D6CAFE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
